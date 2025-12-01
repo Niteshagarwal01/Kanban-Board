@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <i class="ri-layout-grid-fill"></i>
+        </div>
+        <h1>Kanban Board</h1>
+        <p class="subtitle">Organize your workflow with drag and drop</p>
+      </header>
+
+      <!-- Add Task Section -->
+      <div class="add-task-section">
+        <div class="input-wrapper">
+          <i class="ri-add-line"></i>
+          <input type="text" id="taskInput" placeholder="What needs to be done?" />
+        </div>
+        <div class="select-wrapper">
+          <i class="ri-folder-line"></i>
+          <select id="columnSelect">
+            <option value="todo">To Do</option>
+            <option value="progress">In Progress</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <button id="addTaskBtn">
+          <i class="ri-add-circle-line"></i>
+          <span>Add Task</span>
+        </button>
+      </div>
+
+      <div class="board">
+        <!-- TO DO Column -->
+        <div class="list" id="todo" data-status="todo">
+          <div class="list-header">
+            <div class="header-left">
+              <i class="ri-checkbox-blank-circle-line"></i>
+              <h2>To Do</h2>
+            </div>
+            <span class="task-count" id="todo-count">0</span>
+          </div>
+          <div class="cards-container" id="todo-cards"></div>
+        </div>
+
+        <!-- IN PROGRESS Column -->
+        <div class="list" id="progress" data-status="progress">
+          <div class="list-header">
+            <div class="header-left">
+              <i class="ri-loader-4-line"></i>
+              <h2>In Progress</h2>
+            </div>
+            <span class="task-count" id="progress-count">0</span>
+          </div>
+          <div class="cards-container" id="progress-cards"></div>
+        </div>
+
+        <!-- DONE Column -->
+        <div class="list" id="done" data-status="done">
+          <div class="list-header">
+            <div class="header-left">
+              <i class="ri-checkbox-circle-line"></i>
+              <h2>Done</h2>
+            </div>
+            <span class="task-count" id="done-count">0</span>
+          </div>
+          <div class="cards-container" id="done-cards"></div>
+        </div>
+      </div>
+
+      <!-- Clear All Button -->
+      <div class="actions">
+        <button id="clearAllBtn" class="clear-btn">
+          <i class="ri-delete-bin-6-line"></i>
+          <span>Clear All Tasks</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="ri-edit-2-line"></i>
+          <h3>Edit Task</h3>
+        </div>
+        <input type="text" id="editTaskInput" placeholder="Update your task..." />
+        <div class="modal-buttons">
+          <button id="cancelEditBtn" class="cancel-btn">
+            <i class="ri-close-line"></i>
+            <span>Cancel</span>
+          </button>
+          <button id="saveEditBtn" class="save-btn">
+            <i class="ri-check-line"></i>
+            <span>Save</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
