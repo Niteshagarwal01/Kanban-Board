@@ -1,5 +1,5 @@
 # Kanban Board — Project Guide (Small Build #10)
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/02f4dbc6-6291-430a-afb9-dfffcbeb68dd" />
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/2a782ae0-b067-4bdc-b94b-b05b46217b5b" />
 
 
 A modern, responsive Kanban board application with drag-and-drop functionality for task management. Organize your workflow by moving tasks between "To Do", "In Progress", and "Done" columns. Built with vanilla JavaScript, it features local storage persistence, CRUD operations, and a clean, mobile-friendly UI.
