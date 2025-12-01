@@ -1,4 +1,4 @@
-# Kanban Board — Project Guide (Small Build #3)
+# Kanban Board — Project Guide (Small Build #10)
 
 <img width="96" height="96" alt="Kanban_Board_App" src="https://img.icons8.com/fluency/96/task.png" />
 
